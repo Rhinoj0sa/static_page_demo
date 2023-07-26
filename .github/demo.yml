@@ -1,0 +1,19 @@
+name Github Actions Demo
+on:
+  push:
+
+jobs:
+  Explore-Github-Actions:
+    runs on ubuntu-latest
+    steps:
+      - run: echo "the job is automatically triggered by ${{github.repository}}."
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: List the files in the repo
+        run: | 
+          ls ${{github.workspace}}
+      - run echo "job status: ${{job.status}}."
+
+
+
+      
